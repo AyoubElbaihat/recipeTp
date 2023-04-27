@@ -12,9 +12,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = ListRecipeServlet.URL)
+@WebServlet(urlPatterns = {"/list-recipe","/home"})
 public class ListRecipeServlet extends HttpServlet {
-    public static final String URL = "/list-recipe";
+//    public static final String URL = {"/list-recipe","/home"};
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RecipeService recipeService = new RecipeService();

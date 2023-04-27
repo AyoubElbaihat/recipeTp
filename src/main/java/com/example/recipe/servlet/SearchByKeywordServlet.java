@@ -15,7 +15,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = SearchByKeywordServlet.URL)
 public class SearchByKeywordServlet extends HttpServlet {
-    public static final String URL = "/search-by-keyword";
+    public static final String URL = "/auth/search-by-keyword";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RecipeService recipeService = new RecipeService();

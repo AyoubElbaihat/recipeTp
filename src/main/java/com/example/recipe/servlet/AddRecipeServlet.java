@@ -15,7 +15,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = AddRecipeServlet.URL)
 public class AddRecipeServlet extends HttpServlet {
-    public static final String URL = "/add-recipe";
+    public static final String URL = "/auth/add-recipe";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -26,7 +26,7 @@
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
                         <h1 class="fs-4 card-title fw-bold mb-4">Add recipe</h1>
-                        <form action="${pageContext.request.contextPath}/add-recipe" method="post">
+                        <form action="${pageContext.request.contextPath}/auth/add-recipe" method="post">
                             <div class="mb-3">
                                 <label class="mb-2 text-muted" >recipe Name</label>
                                 <input type="text" class="form-control" name="recipeName" placeholder="recipeName">

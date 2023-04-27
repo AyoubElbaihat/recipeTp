@@ -17,7 +17,7 @@
 <body>
 <c:import url="header.jsp"></c:import>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/search-by-category">
+    <form action="${pageContext.request.contextPath}/auth/search-by-category">
         <div class="input-group mb-3">
             <select name="research" class="form-select">
                 <c:forEach items="${categories}" var="category">

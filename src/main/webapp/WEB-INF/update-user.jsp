@@ -26,7 +26,7 @@
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
                         <h1 class="fs-4 card-title fw-bold mb-4">Edit profile</h1>
-                        <form action="${pageContext.request.contextPath}/update" method="post">
+                        <form action="${pageContext.request.contextPath}/auth/update" method="post">
                             <div class="mb-3">
                                 <input type="hidden" class="form-control" name="email" value="${sessionScope.email.getEmail()}" placeholder="email">
                             </div>

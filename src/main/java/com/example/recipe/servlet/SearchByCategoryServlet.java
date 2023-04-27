@@ -15,7 +15,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = SearchByCategoryServlet.URL)
 public class SearchByCategoryServlet extends HttpServlet {
-    public static final String URL = "/search-by-category";
+    public static final String URL = "/auth/search-by-category";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Category> categories = new CategoryService().fetchAllCategory();

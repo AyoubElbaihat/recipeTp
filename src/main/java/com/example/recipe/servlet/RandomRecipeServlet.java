@@ -13,7 +13,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = RandomRecipeServlet.URL)
 public class RandomRecipeServlet extends HttpServlet {
-    public static final String URL = "/random-recipe";
+    public static final String URL = "/auth/random-recipe";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RecipeService recipeService = new RecipeService();

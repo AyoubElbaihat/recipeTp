@@ -31,18 +31,18 @@
                                 Search
                             </a>
                             <ul class="dropdown-menu " data-bs-popper="static">
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/search-by-category?research=3">By category</a></li>
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/search-by-keyword">By keyword</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/auth/search-by-category?research=3">By category</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/auth/search-by-keyword">By keyword</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/random-recipe">Random recipe</a>
+                            <a class="nav-link" href="${pageContext.request.contextPath}/auth/random-recipe">Random recipe</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/update">Profile</a>
+                            <a class="nav-link" href="${pageContext.request.contextPath}/auth/update">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a>
+                            <a class="nav-link" href="${pageContext.request.contextPath}/auth/logout">Logout</a>
                         </li>
                     </c:if>
                 </ul>

@@ -17,9 +17,9 @@
 <body>
 <c:import url="header.jsp"></c:import>
 <div class="container">
-    <form action="${pageContext.request.contextPath}/search-by-keyword">
+    <form action="${pageContext.request.contextPath}/auth/search-by-keyword">
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search..." name="research">
+            <input type="text" class="form-control" placeholder="Search with keyword for example: Oeuf... and click on button submit" name="research">
             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
         </div>
     </form>
