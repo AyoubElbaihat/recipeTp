@@ -63,8 +63,29 @@ public class UserJdbcDao implements UserDao {
 
     @Override
     public User findById(Integer integer) {
-        return null;
+        User userFound = null;
+
+        Connection connection = ConnectionManager.getInstance();
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE id=?");
+            statement.setInt(1, integer);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String email = resultSet.getString("email");
+                String password = resultSet.getString("password");
+                String firstName = resultSet.getString("firstName");
+                String lastName = resultSet.getString("lastName");
+                String image = resultSet.getString("image");
+
+                userFound = new User(id,email,password,firstName,lastName,image);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userFound;
     }
+
 
     @Override
     public void update(User entity) {

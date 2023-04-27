@@ -2,6 +2,7 @@ package com.example.recipe.service;
 
 import com.example.recipe.dao.jdbc.UserJdbcDao;
 import com.example.recipe.model.User;
+import jakarta.servlet.http.HttpSession;
 
 public class UserService {
     UserJdbcDao userJdbcDao = new UserJdbcDao();
@@ -13,4 +14,7 @@ public class UserService {
         return userJdbcDao.create(userToCreate);
     }
 
+    public void updateUser(User user){
+        userJdbcDao.update(user);
+    }
 }

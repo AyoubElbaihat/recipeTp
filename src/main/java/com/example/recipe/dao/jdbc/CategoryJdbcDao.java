@@ -56,6 +56,25 @@ public class CategoryJdbcDao implements CategoryDao {
             return null;
         }
     }
+    public Category findByName(String string) {
+        Connection connection = ConnectionManager.getInstance();
+        String query = "SELECT id, nameCategory  FROM categories WHERE nameCategory = ?";
+        try (PreparedStatement pst = connection.prepareStatement(query)) {
+            pst.setString(1, string);
+            ResultSet result = pst.executeQuery();
+            if (result.next()) {
+                return new Category(
+                        result.getInt("id"),
+                        result.getString("nameCategory")
+                );
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     @Override
     public void update(Category entity) {

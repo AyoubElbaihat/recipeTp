@@ -29,7 +29,7 @@ public class SignupServlet extends HttpServlet {
         String image = req.getParameter("image");
         try {
             new UserService().createUser(email,password,firstName,lastName,image);
-            resp.sendRedirect("list-category");
+            resp.sendRedirect("list-recipe");
         } catch (NumberFormatException e) {
             e.printStackTrace();
             resp.sendRedirect(req.getContextPath() + SignupServlet.URL + "?error=true");

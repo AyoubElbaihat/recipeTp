@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
         if (user != null && user.getPassword().equals(password)) {
             HttpSession session = req.getSession(true);
             session.setAttribute("email", user);
-            resp.sendRedirect("/list-car");
+            resp.sendRedirect("/list-recipe");
         } else {
             req.setAttribute("isError", true);
             req.getRequestDispatcher(req.getContextPath() +"/WEB-INF/login.jsp").forward(req, resp);

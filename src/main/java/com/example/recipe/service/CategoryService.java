@@ -10,4 +10,11 @@ public class CategoryService {
     public List<Category> fetchAllCategory() {
         return categoryJdbcDao.findAll();
     }
+    public Category fetchByName(String string){
+        return categoryJdbcDao.findByName(string);
+    }
+    public Category fetchById(int integer){
+        return categoryJdbcDao.findById(integer);
+    }
+
 }

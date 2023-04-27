@@ -17,7 +17,7 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/list-recipe">Home</a>
                     </li>
 
-                    <c:if test="${empty sessionScope.username}">
+                    <c:if test="${empty sessionScope.email}">
                         <li class="nav-item">
                             <a class="nav-link" href="${pageContext.request.contextPath}/signup">SignUp</a>
                         </li>
@@ -25,15 +25,18 @@
                             <a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a>
                         </li>
                     </c:if>
-                    <c:if test="${not empty sessionScope.username}">
+                    <c:if test="${not empty sessionScope.email}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                                 Search
                             </a>
                             <ul class="dropdown-menu " data-bs-popper="static">
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/auth/add-car">By category</a></li>
-                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/auth/add-category">By keyword</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/search-by-category?research=3">By category</a></li>
+                                <li><a class="dropdown-item" href="${pageContext.request.contextPath}/search-by-keyword">By keyword</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/random-recipe">Random recipe</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="${pageContext.request.contextPath}/update">Profile</a>

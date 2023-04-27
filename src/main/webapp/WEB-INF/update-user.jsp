@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>signup</title>
+    <title>Edit profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -25,39 +25,41 @@
                 </div>
                 <div class="card shadow-lg">
                     <div class="card-body p-5">
-                        <h1 class="fs-4 card-title fw-bold mb-4">Signup</h1>
-                        <form action="${pageContext.request.contextPath}/signup" method="post">
+                        <h1 class="fs-4 card-title fw-bold mb-4">Edit profile</h1>
+                        <form action="${pageContext.request.contextPath}/update" method="post">
                             <div class="mb-3">
-                                <label class="mb-2 text-muted" >Email</label>
-                                <input type="text" class="form-control" name="email" placeholder="email">
+                                <input type="hidden" class="form-control" name="email" value="${sessionScope.email.getEmail()}" placeholder="email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" name="id" value="${sessionScope.email.getId()}" placeholder="id">
                             </div>
                             <div class="mb-3">
                                 <div class="mb-2 w-100">
                                     <label class="text-muted" >Password</label>
                                 </div>
-                                <input type="password" class="form-control" name="password" placeholder="password">
+                                <input type="password" class="form-control" name="password"  placeholder="password">
                             </div>
                             <div class="mb-3">
                                 <div class="mb-2 w-100">
                                     <label class="text-muted" >First Name</label>
                                 </div>
-                                <input type="text" class="form-control" name="firstName" placeholder="firstName">
+                                <input type="text" class="form-control" name="firstName"  placeholder="firstName">
                             </div>
                             <div class="mb-3">
                                 <div class="mb-2 w-100">
                                     <label class="text-muted" >Last Name</label>
                                 </div>
-                                <input type="text" class="form-control" name="lastName" placeholder="lastName">
+                                <input type="text" class="form-control" name="lastName"  placeholder="lastName">
                             </div>
                             <div class="mb-3">
                                 <div class="mb-2 w-100">
                                     <label class="text-muted" >url img</label>
                                 </div>
-                                <input type="text" class="form-control" name="image" placeholder="url">
+                                <input type="text" class="form-control" name="image"  placeholder="url">
                             </div>
                             <div class="d-flex align-items-center">
                                 <button type="submit" class="btn btn-primary ms-auto">
-                                    Signup
+                                    Edit profile
                                 </button>
                             </div>
                         </form>
